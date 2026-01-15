@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #000000, #2d0b3d, #6a0dad, #8a2be2);
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(15px);
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 0 40px rgba(138, 43, 226, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-width: 800px;
+      margin: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      animation: glow 2s ease-in-out infinite alternate;
+      color: #ffb6c1;
+    }
+
+    .message {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      margin-top: 20px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .heart-icon {
+      color: #ff69b4;
+      font-size: 2rem;
+      margin: 0 10px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .special-text {
+      color: #e6b0ff;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 25px 0;
+      text-shadow: 0 0 10px rgba(230, 176, 255, 0.7);
+    }
+
+    .quote {
+      font-style: italic;
+      color: #d8bfd8;
+      border-left: 3px solid #9370db;
+      padding-left: 15px;
+      margin: 25px 0;
+      text-align: left;
+    }
+
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      color: #ffb6c1;
+      margin-top: 30px;
+      text-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; }
+      to { text-shadow: 0 0 20px #ff1493, 0 0 40px #8a2be2; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .hearts span {
+      position: absolute;
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: linear-gradient(45deg, #ff69b4, #9370db);
+      clip-path: polygon(50% 0%, 61% 21%, 82% 21%, 69% 35%, 75% 57%, 50% 45%, 25% 57%, 31% 35%, 18% 21%, 39% 21%);
+      animation: float 15s linear infinite;
+      bottom: -20px;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Additional floating elements */
+    .floating-hearts span:nth-child(odd) {
+      background: linear-gradient(45deg, #8a2be2, #da70d6);
+    }
+    
+    .floating-hearts span:nth-child(even) {
+      background: linear-gradient(45deg, #ff1493, #ff69b4);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="hearts">
+    <span style="left:10%;animation-delay:0s;"></span>
+    <span style="left:30%;animation-delay:2s;"></span>
+    <span style="left:50%;animation-delay:4s;"></span>
+    <span style="left:70%;animation-delay:6s;"></span>
+    <span style="left:90%;animation-delay:8s;"></span>
+  </div>
+  <div class="card">
+    <h1>🎉 Happy Birthday 💖</h1>
+    <p>Wishing you all the smiles, love & magic in the world 💫<br>
+    You deserve the best day ever 🌸</p>
+  </div>
+</body>
+</html>
