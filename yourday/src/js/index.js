@@ -1,4 +1,3 @@
-
 let firstSlideContainer = 
 document.getElementsByClassName("slide--content")[0];
 
@@ -16,13 +15,10 @@ document.getElementsByClassName("third--canvas")[0];
 
 thirdCanvas.setAttribute("style","display:none");
 
-
-
 let containerToggleOne = setTimeout(function(){
 	firstSlideContainer.setAttribute("style","display:none");
 	secondSlideContainer.setAttribute("style","display:block");
 },2500);
-
 
 let removeFirstSlide = setTimeout(function(){
 	document.getElementsByClassName("first--slide")[0].setAttribute("style","display:none;")
@@ -31,5 +27,10 @@ let removeFirstSlide = setTimeout(function(){
 
 let removeSecondCanvas = setTimeout(function(){
 	secondCanvas.setAttribute("style","display:none");
-	thirdCanvas.setAttribute("style","display:block")
-},9800)
+	thirdCanvas.setAttribute("style","display:block");
+	
+	// After showing third canvas, wait 3 seconds then redirect
+	setTimeout(function() {
+		window.location.href = "https://markrod1029.github.io/birthday/foryou/";
+	}, 7000); // 3 seconds delay after third canvas appears
+},9800);
