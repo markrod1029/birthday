@@ -94,7 +94,6 @@
 
     /* Main Card Styles */
     .card {
-      display: none;
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(15px);
       padding: 50px;
@@ -106,10 +105,6 @@
       animation: fadeIn 2s ease-in-out;
       position: relative;
       z-index: 10;
-    }
-
-    .card.show {
-      display: block;
     }
 
     h1 {
@@ -316,7 +311,7 @@
           <div class="countdown-label">Secs</div>
         </div>
       </div>
-      <div class="birthday-date" id="birthdayDate">January 16</div>
+      <div class="birthday-date" id="birthdayDate">February 1</div>
     </div>
   </div>
 
@@ -341,9 +336,9 @@
   </div>
 
   <script>
-    // Set the birthday date (January 16)
-    const birthdayMonth = 0; // January is month 0
-    const birthdayDay = 16;
+    // Set the birthday date (Feb 1)
+    const birthdayMonth = 1; // Feb is month 0
+    const birthdayDay = 1;
     
     // Get current date
     const today = new Date();
@@ -361,7 +356,7 @@
     }
     
     // Display the birthday date
-    document.getElementById('birthdayDate').textContent = `January 16, ${nextBirthdayYear}`;
+    document.getElementById('birthdayDate').textContent = `February 1, ${nextBirthdayYear}`;
     
     // Check if today is the birthday
     const isBirthdayToday = today.getMonth() === birthdayMonth && today.getDate() === birthdayDay;
@@ -450,17 +445,14 @@
         // Reset countdown for next year
         nextBirthdayYear += 1;
         birthdayDate = new Date(nextBirthdayYear, birthdayMonth, birthdayDay);
-        document.getElementById('birthdayDate').textContent = `January 16, ${nextBirthdayYear}`;
+        document.getElementById('birthdayDate').textContent = `February 1, ${nextBirthdayYear}`;
         
-        // If it's January 16 today, start celebration
+        // If it's February 1 today, start celebration
         const today = new Date();
         if (today.getMonth() === birthdayMonth && today.getDate() === birthdayDay) {
           document.querySelector('.countdown-title').textContent = '🎉 Happy Birthday! 🎉';
           document.querySelector('.countdown-title').style.color = '#ff69b4';
           document.querySelector('.countdown-title').style.fontSize = '1.3rem';
-          
-          // Show the card
-          document.querySelector('.card').classList.add('show');
           
           // Create floating elements
           createFloatingElements();
@@ -505,9 +497,6 @@
       document.querySelector('.countdown-title').textContent = '🎉 Happy Birthday! 🎉';
       document.querySelector('.countdown-title').style.color = '#ff69b4';
       document.querySelector('.countdown-title').style.fontSize = '1.3rem';
-      
-      // Show the card
-      document.querySelector('.card').classList.add('show');
       
       // Create floating elements
       createFloatingElements();

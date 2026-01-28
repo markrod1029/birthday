@@ -31,6 +31,6 @@ let removeSecondCanvas = setTimeout(function(){
 	
 	// After showing third canvas, wait 3 seconds then redirect
 	setTimeout(function() {
-		window.location.href = "https://markrod1029.github.io/birthday/foryou/";
+		window.location.href = "../foryou/index.html";
 	}, 7000); // 7 seconds delay after third canvas appears
 },9800);
